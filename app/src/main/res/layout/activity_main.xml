@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scratch_card_bg"
+    xmlns:SpinWheel="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <com.loyaltyworks.loyltyspinwheel.SpinWheel
+        android:id="@+id/spinView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        SpinWheel:background_color="@color/colorPrimaryLight"
+        SpinWheel:text_size="60"/>
+
+    <LinearLayout
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_bg"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Play"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold|italic"/>
+    </LinearLayout>
+
+</RelativeLayout>

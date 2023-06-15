@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@color/colorAccent"
+        android:padding="20dp">
+
+        <!--<ImageView
+            android:id="@+id/image_icons"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/zero"/>-->
+
+        <TextView
+            android:id="@+id/textDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="17sp" />
+
+
+
+        <TextView
+            android:id="@+id/textOk"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/corner_bg"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="OK"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>
