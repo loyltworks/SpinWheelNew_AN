@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
          */
 
         /*** Please give data into mainUrl otherwise it will not run */
-        mainUrl = "data format should be given here";
+        mainUrl = "?r1=390&s2=300,310,320,330,340,350,360,370,380,390,4000&g4=1439&url=https://centdemoserv.loyltwo3ks.com/MobileApp/MobileApi.svc/json/";
         String encoded =  encodeString(mainUrl);
 
         /*** Call SpinWheel & pass data ***/

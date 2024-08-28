@@ -14,7 +14,7 @@
         android:layout_height="300dp"
         android:layout_centerInParent="true"
         SpinWheel:background_color="@color/colorPrimaryLight"
-        SpinWheel:text_size="60"/>
+        SpinWheel:text_size="34"/>
 
     <LinearLayout
         android:id="@+id/start_btn"
