@@ -39,7 +39,7 @@ public class SpinWheel extends FrameLayout implements OnRotationListener{
     String gameId = "";
     String finalUrl = "";
 
-//    List<String> colorCodes = new ArrayList<>();
+    List<String> colorCodes = new ArrayList<>();
 
     public SpinWheel(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -117,18 +117,19 @@ public class SpinWheel extends FrameLayout implements OnRotationListener{
         finalUrl = url.split("&")[0];
         Log.d("brrvr","finalUrl : " + finalUrl);
 
-        /*  For Static color code
-        colorCodes.add("#FF0000");
-        colorCodes.add("#4B0082");
-        colorCodes.add("#0000FF");
-        colorCodes.add("#00FF00");
-        colorCodes.add("#94b30c");
-        colorCodes.add("#FF7F00");
-        colorCodes.add("#9400D3");
-        colorCodes.add("#49f5e4");
-        colorCodes.add("#499cf5");
-        colorCodes.add("#95ff00");
-        colorCodes.add("#c77042");*/
+
+        colorCodes.add("#FB3536");
+        colorCodes.add("#CDC2A5");
+        colorCodes.add("#10567C");
+        //colorCodes.add("#777777");
+        colorCodes.add("#777777");
+        colorCodes.add("#652431");
+        colorCodes.add("#A4B998");
+        colorCodes.add("#FB3536");
+        colorCodes.add("#CDC2A5");
+        colorCodes.add("#10567C");
+        colorCodes.add("#777777");
+        colorCodes.add("#652431");
 
         /** Set dynamic text value in WheelItem model start ***/
         List<WheelItem> itemToAddInWheel = new ArrayList<>();
@@ -136,13 +137,13 @@ public class SpinWheel extends FrameLayout implements OnRotationListener{
         // If total item length from backend is less than 12 then should add 0 in first position
         if (elements.length < 12){
             // Add 0 at the first index
-            itemToAddInWheel.add(0, new WheelItem(Color.parseColor("#e8070e"),"0"));
+            itemToAddInWheel.add(0, new WheelItem(Color.parseColor("#A4B998"),"0"));
         }
 
-        for (int i = 0; i < elements.length; i++) {
-            int randomColor = generateRandomColorHex();                 // To get Random color code
+        for (int i = 0; i < colorCodes.size(); i++) {
+            //int randomColor = generateRandomColorHex();                 // To get Random color code
 //            String colorCode = colorCodes.get(i % colorCodes.size()); // Get a color code from the list cyclically
-            itemToAddInWheel.add(new WheelItem(randomColor,elements[i]));
+            itemToAddInWheel.add(new WheelItem(Color.parseColor(colorCodes.get(i)),elements[i]));
         }
         /** Set dynamic text value in WheelItem model close ***/
 
@@ -217,3 +218,4 @@ public class SpinWheel extends FrameLayout implements OnRotationListener{
 
 
 }
+

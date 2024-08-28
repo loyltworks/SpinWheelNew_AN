@@ -49,7 +49,7 @@ final class WheelViewDraw extends View {
         textPaint.setColor(Color.WHITE);
         textPaint.setAntiAlias(true);
         textPaint.setDither(true);
-        textPaint.setLetterSpacing(0.2f);
+        textPaint.setLetterSpacing(0f);
         textPaint.setTextSize(textSize);
         //rect rang of the arc
         range = new RectF(padding, padding, padding + radius, padding + radius);
@@ -139,10 +139,16 @@ final class WheelViewDraw extends View {
     private void drawText(Canvas canvas, float tempAngle, float sweepAngle, String text) {
         Path path = new Path();
         path.addArc(range, tempAngle, sweepAngle);
-        float textWidth = textPaint.measureText(text);
-        int hOffset = (int) (radius * Math.PI / mWheelItems.size() / 2 - textWidth / 2);
-        int vOffset = (radius / 2 / 3) - 3;
-        canvas.drawTextOnPath(text, path, hOffset, vOffset, textPaint);
+
+        int hOffset = (int) (radius * Math.PI / mWheelItems.size()/2 + 11);
+        int vOffset = (radius / 2 / 3) - 68;
+        Matrix matrix = new Matrix();
+        RectF bounds = new RectF();
+        path.computeBounds(bounds,true);
+        matrix.setRotate(80,bounds.centerX(),bounds.centerY());
+        path.transform(matrix);
+
+        canvas.drawTextOnPath(text, path, hOffset, vOffset , textPaint);
     }
 
     /**
